@@ -1,0 +1,47 @@
+{
+  "name": "@cpietrzykowski/value-separated-iterable",
+  "version": "0.0.1",
+  "keywords": [],
+  "homepage": "https://github.com/cpietrzykowski/js-value-separated-iterable",
+  "description": "A value separated iterable for Javascript.",
+  "author": "Christopher Pietrzykowski",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/cpietrzykowski/js-value-separated-iterable.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "npm run build:test",
+    "build:test": "c8 --all --reporter=none ava --config ava.build.config.js src/**/*",
+    "postbuild:test": "npm run coverage:report",
+    "coverage:report": "c8 report",
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "c8 ava --config ava.config.js src/**/*"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/index.d.ts",
+    "lib/index.js.map"
+  ],
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "devDependencies": {
+    "@ava/typescript": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "ava": "^3.8.2",
+    "c8": "^7.1.2",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-ava": "^10.3.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
