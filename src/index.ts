@@ -7,7 +7,7 @@
  */
 export function ValueSeparatedIterable<T>(
   base: Iterable<T>,
-  separator: T
+  separator: T,
 ): Iterator<T> & Iterable<T> {
   const iterator = base[Symbol.iterator]();
   let generatingSeparators = false;
