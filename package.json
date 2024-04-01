@@ -1,6 +1,6 @@
 {
   "name": "@cpietrzykowski/value-separated-iterable",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "keywords": [],
   "homepage": "https://github.com/cpietrzykowski/js-value-separated-iterable",
   "description": "A value separated iterable for Javascript.",
@@ -8,16 +8,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/cpietrzykowski/js-value-separated-iterable.git"
+    "url": "git+ssh://git@github.com/cpietrzykowski/js-value-separated-iterable.git"
   },
   "scripts": {
     "build": "tsc",
     "postbuild": "npm run build:test",
-    "build:test": "c8 --all --reporter=none ava --config ava.build.config.js src/**/*",
+    "build:test": "c8 --all --reporter=none ava --config ava.build.config.mjs src/**/*",
     "postbuild:test": "npm run coverage:report",
     "coverage:report": "c8 report",
     "lint": "eslint \"src/**/*.ts\"",
-    "test": "c8 ava --config ava.config.js src/**/*"
+    "test": "c8 ava --config ava.config.mjs src/**/*"
   },
   "files": [
     "lib/index.js",
@@ -27,18 +27,18 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "devDependencies": {
-    "@ava/typescript": "^1.1.1",
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
-    "ava": "^3.8.2",
-    "c8": "^7.1.2",
-    "eslint": "^7.0.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-ava": "^10.3.0",
-    "eslint-plugin-prettier": "^3.1.3",
-    "prettier": "^2.0.5",
-    "ts-node": "^8.10.1",
-    "typescript": "^3.9.2"
+    "@ava/typescript": "^4.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "ava": "^6.1.2",
+    "c8": "^9.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-ava": "^14.0.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
   },
   "private": false,
   "publishConfig": {

@@ -1,6 +1,6 @@
 # value separated iterable
 
-![npm](https://github.com/cpietrzykowski/js-value-separated-iterable/workflows/npm/badge.svg)
+![npm](https://github.com/cpietrzykowski/js-value-separated-iterable/actions/workflows/package.yml/badge.svg)
 
 Creates a value separated iterable (and iterator) with provided `separator` separating values traversed by `base` iterable.
  

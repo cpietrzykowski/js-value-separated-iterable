@@ -48,7 +48,7 @@ test(`value-separated-iterable:iterable`, function (t) {
   for (const c of cases) {
     t.deepEqual(
       [...ValueSeparatedIterable([...c.elements], c.separator)],
-      c.expected
+      c.expected,
     );
   }
 });
